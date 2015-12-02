@@ -1,10 +1,10 @@
 
 package gg;
 
-public class videoGame {
+public class VideoGame {
 	public String name;
 	public String publishingParty;
-	public videoGame(String name, String publishingParty){
+	public VideoGame(String name, String publishingParty){
 		this.name = name;
 		this.publishingParty = publishingParty;
 	}

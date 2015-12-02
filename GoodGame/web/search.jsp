@@ -6,7 +6,7 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="gg.Party"%>
-<%@page import="gg.videoGame"%>
+<%@page import="gg.VideoGame"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -30,13 +30,13 @@
             parties.add(bethesda);
             parties.add(lucasArts);
 
-            ArrayList<videoGame> games = new ArrayList<videoGame>();
+            ArrayList<VideoGame> games = new ArrayList<VideoGame>();
 
-            videoGame fallout4 = new videoGame("Fallout 4", "Bethesda");
-            videoGame skyrim = new videoGame("Skyrim", "Bethesda");
-            videoGame battlefield3 = new videoGame("Battlefield 3", "EA");
-            videoGame darkforces = new videoGame("Dark Forces", "LucasArts");
-            videoGame outcast = new videoGame("Jedi Outcast", "LucasArts");
+            VideoGame fallout4 = new VideoGame("Fallout 4", "Bethesda");
+            VideoGame skyrim = new VideoGame("Skyrim", "Bethesda");
+            VideoGame battlefield3 = new VideoGame("Battlefield 3", "EA");
+            VideoGame darkforces = new VideoGame("Dark Forces", "LucasArts");
+            VideoGame outcast = new VideoGame("Jedi Outcast", "LucasArts");
 
             games.add(darkforces);
             games.add(outcast);
@@ -72,22 +72,15 @@
             
 		//display only LucasArts games
 		System.out.println("Show only LucasArts games");
-		String userSearchInput = "lucasarts";
-		for (int i = 0; i < games.size(); i++){
-			if (games.get(i).publishingParty.equalsIgnoreCase(searchInput)){
-				for (int k = 0; k < parties.size(); k++){
-					if (parties.get(k).name.equalsIgnoreCase(searchInput)){
-						boolean checkValidity = parties.get(k).verifyIntegrity();
-						if (checkValidity == true){
-            %>
-            <p><%=games.get(i).name%> <%=games.get(i).publishingParty%></p>
-            <%
-//							System.out.println(games.get(i).name + ", " + games.get(i).publishingParty);
-						}
-					}
-				}
-			}
-		}
+                for (VideoGame game : games) {
+                    if (game.publishingParty.toLowerCase().contains(searchInput)
+                            || game.name.toLowerCase().contains(searchInput)
+                    ) {
+                        %>
+                                <p>hey <%= game.name %></p>
+                        <% 
+                    }
+                }
             %>
         </div>
     </body>

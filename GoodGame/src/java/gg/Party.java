@@ -4,7 +4,7 @@ package gg;
 //	A party is a group that is identified by a name and has licenses
 //	that gives them ownership to many things.
 public class Party {
-	String name;
+	public String name;
 	Evidence licenses;
 	private Intellect intellect;
 	private Property property;

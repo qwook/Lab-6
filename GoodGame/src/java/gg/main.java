@@ -22,13 +22,13 @@ public class main {
 		parties.add(bethesda);
 		parties.add(lucasArts);
 		
-		ArrayList<videoGame> games = new ArrayList<videoGame>();
+		ArrayList<VideoGame> games = new ArrayList<VideoGame>();
 		
-		videoGame fallout4 = new videoGame("Fallout 4", "Bethesda");
-		videoGame skyrim = new videoGame("Skyrim", "Bethesda");
-		videoGame battlefield3 = new videoGame("Battlefield 3", "EA");
-		videoGame darkforces = new videoGame("Dark Forces", "LucasArts");
-		videoGame outcast = new videoGame("Jedi Outcast", "LucasArts");
+		VideoGame fallout4 = new VideoGame("Fallout 4", "Bethesda");
+		VideoGame skyrim = new VideoGame("Skyrim", "Bethesda");
+		VideoGame battlefield3 = new VideoGame("Battlefield 3", "EA");
+		VideoGame darkforces = new VideoGame("Dark Forces", "LucasArts");
+		VideoGame outcast = new VideoGame("Jedi Outcast", "LucasArts");
 		
 		games.add(darkforces);
 		games.add(outcast);
