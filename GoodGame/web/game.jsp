@@ -15,34 +15,33 @@
         <div class="container">
             <br />
             <h1><a class="brand" href="./"><img src="./images/logo.png" /> GoodGame!</a></h1>
-            <h4>Search Results for <%= request.getParameter("searchInput") %></h4>
             <hr />
             <%
-                String searchInput = request.getParameter("searchInput");
+                String gameName = request.getParameter("game");
+                String publisherName = request.getParameter("publisher");
             
                 for (VideoGame game : games) {
-                    if (game.publishingParty.name.toLowerCase().contains(searchInput.toLowerCase())
-                            || game.name.toLowerCase().contains(searchInput.toLowerCase())
+                    if (game.publishingParty.name.equals(publisherName)
+                            && game.name.equals(gameName)
                     ) {
                         %>
-                        
                         <div class="row">
-                            <div class="three columns">
+                            <div class="four columns">
                                 <img width="100%" src="./images/covers/<%= game.cover %>" />
                             </div>
-                            <div class="nine columns">
-                                <h5><%= game.name %> ~ <strong>$10</strong></h5>
-                                <a class="button" href="./game.jsp?game=<%= game.name %>&publisher=<%= game.publishingParty.name %>">View</a>
+                            <div class="eight columns">
+                                <h4><%= game.name %> ~ <strong>$10</strong></h4>
+                                <p><strong>Publisher: </strong><a href="./search.jsp?searchInput=<%= game.publishingParty.name %>"><%= game.publishingParty.name %></a></p>
+                                <p>Cool game with stuff.</p>
                             </div>
                         </div>
-                        
                         <hr />
                         <% 
+                        break;
                     }
                 }
             %>
-            <a class="button" href="./">Back</a>
-            <p></p>
+            <a class="button" href="./">&LeftTriangle; Search for More</a>
         </div>
     </body>
 </html>
