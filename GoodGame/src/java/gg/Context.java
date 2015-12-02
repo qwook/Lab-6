@@ -1,13 +1,15 @@
 
 package gg;
 
+import java.util.List;
+
 public class Context {
 	private Type type;
 	private String contextType;
 	private List<String> relatedContext;
 	
 	public Context(String cType, List<String> rContext) {
-		contextType = ctype;
+		contextType = cType;
 		relatedContext = rContext;
 	}
 	

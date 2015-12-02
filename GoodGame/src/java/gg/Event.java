@@ -1,6 +1,7 @@
 
 package gg;
 
+import java.util.ArrayList;
 import java.util.List;
 public class Event {
 	private List<Media> medias;
@@ -11,7 +12,7 @@ public class Event {
 	public Event(String name, String location, ArrayList<String> people) {
 		eventName = name;
 		eventLocation = location;
-		attendeees = people;
+		attendees = people;
 	}
 	
 	public String getEventName() {

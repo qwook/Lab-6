@@ -10,18 +10,18 @@ public class Type {
 	Context context;
 	private List<Event> event;
 	
-	public abstract void namesEvent(Event event);  
+	public void namesEvent(Event event) {};
 	public void decideEvent(Event event)
 	{
-		this.event = event
+//		this.event = event
 	}
 	public String getTypeName()
 	{  
-		return typeName;  
+		return name;  
 	} 
 	public void setTypeName(String typeName)
 	{  
-		this.typeName = typeName; 
+		this.name = typeName; 
 	}
 	public String getID()
 	{
