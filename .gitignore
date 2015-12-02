@@ -1,0 +1,16 @@
+.DS_Store
+
+/GoodGame/nbproject/private/
+/GoodGame/build/
+/GoodGame/nbbuild/
+/GoodGame/dist/
+/GoodGame/nbdist/
+nbactions.xml
+nb-configuration.xml
+/GoodGame/.nb-gradle/
+
+*.class
+
+*.jar
+*.war
+*.ear
