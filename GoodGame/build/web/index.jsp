@@ -27,7 +27,7 @@
             <div class="row">
                 <%
                     Random random = new Random();
-                    ArrayList<Integer> randomGames = new ArrayList<>();
+                    ArrayList<Integer> randomGames = new ArrayList<Integer>();
                     for (int i = 0; i < 4; i++) {
                         while (true) {
                             int rand = random.nextInt(games.size());
